@@ -14,31 +14,58 @@ public class TVRemote {
     }
 
     public boolean turnOn() {
-
+        if(on) {
+            System.out.println("La tv esta encendida");
+        } else {
+            System.out.println("La tv se ha encendido");
+            on = true;
+        }
+        return on;
     }
 
     public boolean turnOff() {
-
+        if(!on) {
+            System.out.println("La tv esta apagada");
+        } else {
+            System.out.println("La tv se ha apagado");
+            on = false;
+        }
+        return on;
     }
 
     public void channelUp() {
-
+        this.channel++;
+        System.out.println("Estas en el canal:" + this.channel);
     }
 
     public void channelDown() {
-
+        if (this.channel > 0) {
+            this.channel--;
+        } else {
+            System.out.println("No se puede bajar mas el canal");
+        }
     }
 
     public void volumeUp() {
-      
+        this.volume++;
+        System.out.println("El volumen esta al: " + this.volume);
     }
 
     public void volumeDown() {
-
+        if (this.volume > 0) {
+            this.volume--;
+        } else {
+            System.out.println("No puedes bajar mas el volumen");
+        }
     }
 
     public String getColor() {
-
+        if (this.color.equals("Rojo")) {
+            System.out.println("El color del mando es: ");
+        } else {
+            System.out.println("El color del mando es: ");
+        }
+        return this.color;
     }
 
     private boolean checkMinValue(int value) {
